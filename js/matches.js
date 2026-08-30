@@ -17,11 +17,9 @@ async function getMatches() {
 
             container.innerHTML = "";
 
-
             const filteredMatches = events.filter(match => {
 
                 const state = match.status.type.state;
-
 
                 if (filter === "all") {
                     return true;
@@ -64,7 +62,6 @@ async function getMatches() {
                     team => team.homeAway === "home"
                 );
 
-
                 const awayTeam = competition.competitors.find(
                     team => team.homeAway === "away"
                 );
@@ -72,9 +69,22 @@ async function getMatches() {
 
                 const status = match.status.type;
 
-
-                // Get state for CSS class
                 const state = status.state;
+
+
+                // Date and time
+                const matchDate = new Date(match.date);
+
+                const formattedDate = matchDate.toLocaleDateString("en-IN", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric"
+                });
+
+                const formattedTime = matchDate.toLocaleTimeString("en-IN", {
+                    hour: "numeric",
+                    minute: "2-digit"
+                });
 
 
                 container.innerHTML += `
@@ -107,23 +117,25 @@ async function getMatches() {
                             </div>
 
 
-                         <div class="match-info">
+                            <div class="match-info">
 
-    <p>VS</p>
+                                <p>VS</p>
 
-    <span class="match-date">
-        ${formattedDate}
-    </span>
+                                <span class="match-date">
+                                    ${formattedDate}
+                                </span>
 
-    <span class="match-time">
-        ${formattedTime}
-    </span>
+                                <span class="match-time">
+                                    ${formattedTime}
+                                </span>
 
-    <span class="match-status">
-    ${state === "in" ? "🔴 LIVE" : status.shortDetail}
-</span>
+                                <span class="match-status">
+                                    ${state === "in"
+                                        ? "🔴 LIVE"
+                                        : status.shortDetail}
+                                </span>
 
-</div>
+                            </div>
 
 
                             <div class="match-team">
@@ -156,12 +168,10 @@ async function getMatches() {
 
 
         // Show all matches initially
-
         displayMatches("all");
 
 
         // Filter buttons
-
         const filterButtons =
             document.querySelectorAll(".filter-btn");
 
@@ -184,18 +194,6 @@ async function getMatches() {
                 displayMatches(filter);
 
             });
-            const matchDate = new Date(match.date);
-
-const formattedDate = matchDate.toLocaleDateString("en-IN", {
-    day: "numeric",
-    month: "short",
-    year: "numeric"
-});
-
-const formattedTime = matchDate.toLocaleTimeString("en-IN", {
-    hour: "numeric",
-    minute: "2-digit"
-});
 
         });
 
