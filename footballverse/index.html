@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <title>FootballVerse</title>
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav>
+
+            <h2>
+                <a href="index.html">FootballVerse</a>
+            </h2>
+
+            <button class="menu-btn">☰</button>
+
+            <ul>
+
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="pages/leagues.html">Leagues</a>
+                </li>
+
+                <li>
+                    <a href="pages/standings.html">Standings</a>
+                </li>
+
+                <li>
+                    <a href="pages/players.html">Players</a>
+                </li>
+
+            </ul>
+
+            <button class="theme-btn">🌙</button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section id="hero">
+
+            <div class="hero-content">
+
+                <h1>
+                    Experience Football Like Never Before
+                </h1>
+
+                <p>
+                    Live Scores • Top Teams • Star Players • League Standings
+                </p>
+
+                <button
+                    class="secondary-btn"
+                    onclick="window.location.href='pages/matches.html'">
+
+                    Live Matches
+
+                </button>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img
+                    src="assets/images/hero.jpg"
+                    alt="Football Stadium">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= TOP LEAGUES ================= -->
+
+        <section id="top-leagues" class="hidden">
+
+            <h2>Top Leagues</h2>
+
+            <div class="league-container">
+
+
+                <!-- Premier League -->
+
+                <a
+                    href="pages/standings.html?league=eng.1"
+                    class="league-card">
+
+                    <img
+                        src="assets/images/premier-league.png"
+                        alt="Premier League">
+
+                    <h3>
+                        Premier League
+                    </h3>
+
+                </a>
+
+
+                <!-- La Liga -->
+
+                <a
+                    href="pages/standings.html?league=esp.1"
+                    class="league-card">
+
+                    <img
+                        src="assets/images/laliga.png"
+                        alt="La Liga">
+
+                    <h3>
+                        La Liga
+                    </h3>
+
+                </a>
+
+
+                <!-- Serie A -->
+
+                <a
+                    href="pages/standings.html?league=ita.1"
+                    class="league-card">
+
+                    <img
+                        src="assets/images/serie-a.png"
+                        alt="Serie A">
+
+                    <h3>
+                        Serie A
+                    </h3>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= FEATURED TEAMS ================= -->
+
+        <section id="featured-teams" class="hidden">
+
+            <h2>Featured Teams</h2>
+
+            <div class="team-container">
+
+
+                <div class="team-card">
+
+                    <img
+                        src="assets/images/barcelona.png"
+                        alt="Barcelona">
+
+                    <h3>
+                        Barcelona
+                    </h3>
+
+                </div>
+
+
+                <div class="team-card">
+
+                    <img
+                        src="assets/images/realmadrid.png"
+                        alt="Real Madrid">
+
+                    <h3>
+                        Real Madrid
+                    </h3>
+
+                </div>
+
+
+                <div class="team-card">
+
+                    <img
+                        src="assets/images/mancity.png"
+                        alt="Manchester City">
+
+                    <h3>
+                        Manchester City
+                    </h3>
+
+                </div>
+
+
+                <div class="team-card">
+
+                    <img
+                        src="assets/images/bayern.png"
+                        alt="Bayern Munich">
+
+                    <h3>
+                        Bayern Munich
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= LIVE MATCHES ================= -->
+
+        <section id="live-matches">
+
+            <h2>
+                Live Matches
+            </h2>
+
+            <div class="match-container">
+
+                <!-- Matches will be added by JavaScript -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PLAYER SPOTLIGHT ================= -->
+
+        <section id="player-spotlight" class="hidden">
+
+            <h2>
+                Player Spotlight
+            </h2>
+
+            <div class="player-card">
+
+                <img
+                    src="assets/images/messi.png"
+                    alt="Lionel Messi">
+
+                <div class="player-info">
+
+                    <h3>
+                        Lionel Messi
+                    </h3>
+
+                    <p>
+                        Club: Inter Miami
+                    </p>
+
+                    <p>
+                        Position: Forward
+                    </p>
+
+                    <p>
+                        One of the greatest football players of all time,
+                        known for his incredible dribbling, vision and goals.
+                    </p>
+
+                    
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section id="statistics" class="hidden">
+
+            <h2>
+                Football Statistics
+            </h2>
+
+            <div class="stats-container">
+
+
+                <div class="stat-card">
+
+                    <h3>
+                        200+
+                    </h3>
+
+                    <p>
+                        Teams
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>
+                        10,000+
+                    </h3>
+
+                    <p>
+                        Players
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>
+                        50+
+                    </h3>
+
+                    <p>
+                        Leagues
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>
+                        5,000+
+                    </h3>
+
+                    <p>
+                        Matches
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= GALLERY ================= -->
+
+        <section id="gallery" class="hidden">
+
+            <h2>
+                Gallery
+            </h2>
+
+            <div class="gallery-container">
+
+                <img
+                    src="assets/images/gallery1.png"
+                    alt="Football Image 1">
+
+                <img
+                    src="assets/images/gallery2.png"
+                    alt="Football Image 2">
+
+                <img
+                    src="assets/images/gallery3.png"
+                    alt="Football Image 3">
+
+                <img
+                    src="assets/images/gallery4.png"
+                    alt="Football Image 4">
+
+                <img
+                    src="assets/images/gallery5.png"
+                    alt="Football Image 5">
+
+                <img
+                    src="assets/images/gallery6.png"
+                    alt="Football Image 6">
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div class="footer-logo">
+
+                <h2>
+                    FootballVerse
+                </h2>
+
+                <p>
+                    Experience the world's greatest game.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/leagues.html">
+                            Leagues
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/standings.html">
+                            Standings
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/players.html">
+                            Players
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Email: footballverse@gmail.com
+                </p>
+
+                <p>
+                    Phone: +91 98765 43210
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <p class="copyright">
+
+            © 2026 FootballVerse. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= BACK TO TOP ================= -->
+
+    <button id="back-to-top">
+        ↑
+    </button>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/navbar.js"></script>
+
+    <script src="js/animations.js"></script>
+
+    <script src="js/api.js"></script>
+
+    <script src="js/team.js"></script>
+
+</body>
+
+</html>

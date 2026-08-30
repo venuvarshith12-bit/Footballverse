@@ -1,0 +1,72 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+/* Logo */
+
+nav h2{
+    font-size: 30px;
+}
+
+nav h2 a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav h2 a:hover{
+    color: gray;
+}
+
+/* Navigation Links */
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul a:hover{
+    background-color: grey;
+    color: white;
+}
+
+nav{
+    transition: 0.3s;
+}
+
+nav.scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background-color: black;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+nav.scrolled a{
+    color: white;
+}
+.menu-btn{
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
